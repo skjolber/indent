@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/skjolber/indent.svg?branch=master)](https://travis-ci.org/skjolber/indent)
+
 # indent
 Simple utility for configurable indent / whitespace.
 
