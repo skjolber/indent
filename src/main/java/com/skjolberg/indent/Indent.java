@@ -82,19 +82,11 @@ public class Indent {
 		} else {
 			// do not ensure capacity here, leave that up to the caller
 			// append a longer intent than we have prepared
-			char[] next = indentations[indentations.length - 1];
-			
-			buffer.append(next);
-			level -= preparedLevels;
-			
-			while(level >= preparedLevels) {
-				buffer.append(next, linebreakType.length(), next.length - linebreakType.length());
-				
-				level -= preparedLevels;
+			buffer.append(indentations[level % preparedLevels]);
+
+			for(int i = 0; i < level / preparedLevels; i++) {
+				buffer.append(indentations[preparedLevels], linebreakType.length(), indentations[preparedLevels].length - linebreakType.length());
 			}
-			
-			next = indentations[level % indentations.length];
-			buffer.append(next, linebreakType.length(), next.length - linebreakType.length());			
 		}
 	}
 
@@ -104,19 +96,11 @@ public class Indent {
 		} else {
 			// do not ensure capacity here, leave that up to the caller
 			// append a longer intent than we have prepared
-			char[] next = indentations[indentations.length - 1];
-			
-			buffer.append(next);
-			level -= preparedLevels;
-			
-			while(level >= preparedLevels) {
-				buffer.append(next, linebreakType.length(), next.length - linebreakType.length());
-				
-				level -= preparedLevels;
+			buffer.append(indentations[level % preparedLevels]);
+
+			for(int i = 0; i < level / preparedLevels; i++) {
+				buffer.append(indentations[preparedLevels], linebreakType.length(), indentations[preparedLevels].length - linebreakType.length());
 			}
-			
-			next = indentations[level % indentations.length];
-			buffer.append(next, linebreakType.length(), next.length - linebreakType.length());			
 		}
 	}
 	
@@ -125,19 +109,11 @@ public class Indent {
 			buffer.write(indentations[level]);
 		} else {
 			// append a longer intent than we have prepared
-			char[] next = indentations[indentations.length - 1];
-			
-			buffer.write(next);
-			level -= preparedLevels;
-			
-			while(level >= preparedLevels) {
-				buffer.write(next, linebreakType.length(), next.length - linebreakType.length());
-				
-				level -= preparedLevels;
+			buffer.write(indentations[level % preparedLevels]);
+
+			for(int i = 0; i < level / preparedLevels; i++) {
+				buffer.write(indentations[preparedLevels], linebreakType.length(), indentations[preparedLevels].length - linebreakType.length());
 			}
-			
-			next = indentations[level % indentations.length];
-			buffer.write(next, linebreakType.length(), next.length - linebreakType.length());			
 		}
 	}		
 	

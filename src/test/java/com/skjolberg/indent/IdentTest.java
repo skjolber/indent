@@ -85,10 +85,17 @@ public class IdentTest extends AbstractIndentTest {
 	}
 
 	@Test
-	public void testLongerThanPreparedLine() throws IOException {
+	public void testLongerThanPreparedLine1() throws IOException {
 		Indent indent = new IndentBuilder().withUnixLinebreak().withCount(1).withPreparedLevels(4).build();
 		
-		assertLevel(indent, 99);
+		assertLevel(indent, 256);
+	}
+	
+	@Test
+	public void testLongerThanPreparedLine2() throws IOException {
+		Indent indent = new IndentBuilder().withUnixLinebreak().withCount(1).withPreparedLevels(5).build();
+		
+		assertLevel(indent, 127);
 	}
 
 }
