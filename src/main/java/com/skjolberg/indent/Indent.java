@@ -132,4 +132,20 @@ public class Indent {
 	public int getPreparedLevels() {
 		return preparedLevels;
 	}
+	
+	public String asIndent() {
+		StringBuilder increment = new StringBuilder(count);
+		for(int k = 0; k < count; k++) {
+			increment.append(character);
+		}
+		return increment.toString();
+	}
+	
+	public String asLinebreak() {
+		if(linebreakType != null) {
+			return linebreakType.characters;
+		}
+		return null;
+	}
+
 }

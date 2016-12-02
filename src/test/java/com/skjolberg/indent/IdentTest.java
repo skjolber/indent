@@ -36,6 +36,16 @@ public class IdentTest extends AbstractIndentTest {
 	}
 	
 	@Test
+	public void testDefaultFactory() throws IOException {
+		IndentFactory factory = new IndentFactory();
+		
+		assertEquals(Indent.defaultCharacter, factory.getCharacter());
+		assertEquals(Indent.defaultCount, factory.getCount());
+		assertEquals(Indent.defaultPreparedLevels, factory.getPreparedLevels());
+		assertEquals(Indent.defaultLinebreak, factory.getLinebreakType());
+	}	
+	
+	@Test
 	public void testInvalidDefaults1() {
 		exception.expect(Exception.class);
 		

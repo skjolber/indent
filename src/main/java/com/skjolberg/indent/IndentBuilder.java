@@ -2,14 +2,10 @@ package com.skjolberg.indent;
 
 public class IndentBuilder {
 
-	private char character = Indent.defaultCharacter;
-	private int count = Indent.defaultCount;
-	private int preparedLevels = Indent.defaultPreparedLevels;
-	private int resetLevel = -1;
-	private LinebreakType linebreak = Indent.defaultLinebreak;
+	private IndentFactory factory = new IndentFactory();
 	
 	public IndentBuilder withCharacter(char character) {
-		this.character = character;
+		factory.setCharacter(character);
 		
 		return this;
 	}
@@ -23,13 +19,13 @@ public class IndentBuilder {
 	}
 	
 	public IndentBuilder withCount(int count) {
-		this.count = count;
+		factory.setCount(count);
 		
 		return this;
 	}
 	
 	public IndentBuilder withPreparedLevels(int preparedLevels) {
-		this.preparedLevels = preparedLevels;
+		factory.setPreparedLevels(preparedLevels);
 		
 		return this;
 	}
@@ -46,8 +42,8 @@ public class IndentBuilder {
 		return withLinebreak(LinebreakType.LineFeed);
 	}
 
-	private IndentBuilder withLinebreak(LinebreakType linebreak) {
-		this.linebreak = linebreak;
+	public IndentBuilder withLinebreak(LinebreakType linebreak) {
+		factory.setLinebreakType(linebreak);
 		
 		return this;
 	}
@@ -59,21 +55,13 @@ public class IndentBuilder {
 	 */
 	
 	public IndentBuilder withResetLevel(int resetLevel) {
-		this.resetLevel = resetLevel;
+		factory.setResetLevel(resetLevel);
 		
 		return this;
 	}
 
 	public Indent build() {
-		
-		if(resetLevel != -1) {
-			if(preparedLevels - 1 >= resetLevel) {
-				return new PreparedResetIndent(character, count, resetLevel, linebreak);
-			}
-			return new ResetIndent(character, count, preparedLevels, resetLevel, linebreak);
-		}
-		
-		return new Indent(character, count, preparedLevels, linebreak);
+		return factory.build();
 	}
 		
 }
