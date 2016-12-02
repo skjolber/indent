@@ -46,4 +46,7 @@ public class PreparedResetIndent extends Indent {
 		buffer.write(indentations[level % resetLevel]);
 	}
 	
+	public int getResetLevel() {
+		return resetLevel;
+	}
 }

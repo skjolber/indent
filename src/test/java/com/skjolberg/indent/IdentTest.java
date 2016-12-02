@@ -43,6 +43,7 @@ public class IdentTest extends AbstractIndentTest {
 		assertEquals(Indent.defaultCount, factory.getCount());
 		assertEquals(Indent.defaultPreparedLevels, factory.getPreparedLevels());
 		assertEquals(Indent.defaultLinebreak, factory.getLinebreakType());
+		assertEquals(-1, factory.getResetLevel());
 	}	
 	
 	@Test
