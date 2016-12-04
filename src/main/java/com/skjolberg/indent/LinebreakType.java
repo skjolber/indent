@@ -17,4 +17,13 @@ public enum LinebreakType {
 	public int length() {
 		return characters.length();
 	}
+	
+	public static LinebreakType parse(String string) {
+		for (LinebreakType linebreakType : values()) {
+			if(linebreakType.characters.equals(string)) {
+				return linebreakType;
+			}
+		}
+		throw new IllegalArgumentException();
+	}
 }

@@ -58,4 +58,7 @@ public class ResetIndent extends Indent {
 		}
 	}
 	
+	public int getResetLevel() {
+		return resetLevel;
+	}
 }
