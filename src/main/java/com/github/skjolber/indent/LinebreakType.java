@@ -1,4 +1,4 @@
-package com.skjolberg.indent;
+package com.github.skjolber.indent;
 
 public enum LinebreakType {
 	

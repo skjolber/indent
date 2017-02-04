@@ -1,4 +1,4 @@
-package com.skjolberg.indent;
+package com.github.skjolber.indent;
 
 import java.io.IOException;
 import java.io.Writer;

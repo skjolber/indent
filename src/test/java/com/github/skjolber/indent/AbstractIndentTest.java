@@ -1,9 +1,11 @@
-package com.skjolberg.indent;
+package com.github.skjolber.indent;
 
 import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 import java.io.StringWriter;
+
+import com.github.skjolber.indent.Indent;
 
 public abstract class AbstractIndentTest {
 

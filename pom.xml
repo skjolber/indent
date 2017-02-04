@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.skjolberg</groupId>
+	<groupId>com.github.skjolber</groupId>
 	<artifactId>indent</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -41,11 +41,6 @@
 		<url>https://github.com/skjolber/indent/issues</url>
 	</issueManagement>
 
-	<ciManagement>
-		<system>Jenkins</system>
-		<url>https://travis-ci.org/skjolber/indent</url>
-	</ciManagement>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -54,8 +49,7 @@
 		<maven.compiler.target>1.7</maven.compiler.target>
 		
 		<junit.version>4.12</junit.version>
-		<maven.jacoco.plugin.version>0.7.8</maven.jacoco.plugin.version>
-		
+		<maven.jacoco.plugin.version>0.7.8</maven.jacoco.plugin.version>		
 	</properties>
 
 	<dependencies>
@@ -181,18 +175,12 @@
 		<profile>
 			<!-- mvn -P release release:perform -->
 			<id>release</id>
-			<properties>
-				<!-- this is useful when the desired key is not the default (first) export 
-					GPG_KEY_NAME=ABCDEF01 -->
-				<gpg.executable>gpg</gpg.executable>
-				<gpg.keyname>${env.GPG_KEY_NAME}</gpg.keyname>
-			</properties>
 			<build>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.6</version>
+						<version>1.5</version>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>

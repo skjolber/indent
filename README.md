@@ -6,7 +6,7 @@ Simple utility for configurable indent / whitespace.
 Configuration options:
 
  * indent count, character
- * unix/windows or no line-break
+ * UNIX/Windows or no line-break
  * reset-level - drop indent down to zero if whitespace fills the whole display width
  * prepared-level - the number of read-to-go strings for optimal performance
 
@@ -73,7 +73,7 @@ The utility does not keep references to increasingly long strings; its size is f
 
 # History
 
- - [1.0.0]: Initial version (pending)
+ - [1.0.0]: Initial version
 
 [Apache 2.0]:          	http://www.apache.org/licenses/LICENSE-2.0.html
 [issue-tracker]:       	https://github.com/skjolber/indent/issues

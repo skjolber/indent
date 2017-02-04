@@ -1,4 +1,4 @@
-package com.skjolberg.indent;
+package com.github.skjolber.indent;
 
 import static org.junit.Assert.*;
 
@@ -7,6 +7,10 @@ import java.io.IOException;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+
+import com.github.skjolber.indent.Indent;
+import com.github.skjolber.indent.IndentBuilder;
+import com.github.skjolber.indent.IndentFactory;
 
 public class IdentTest extends AbstractIndentTest {
 

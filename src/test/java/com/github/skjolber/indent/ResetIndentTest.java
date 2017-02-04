@@ -1,4 +1,4 @@
-package com.skjolberg.indent;
+package com.github.skjolber.indent;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -8,6 +8,11 @@ import java.io.IOException;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+
+import com.github.skjolber.indent.Indent;
+import com.github.skjolber.indent.IndentBuilder;
+import com.github.skjolber.indent.PreparedResetIndent;
+import com.github.skjolber.indent.ResetIndent;
 
 public class ResetIndentTest extends AbstractIndentTest {
 
