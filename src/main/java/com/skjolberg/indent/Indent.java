@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.Writer;
 
 /**
- * Append whitespace to character outputs in levels.<br/><br/>
+ * Append whitespace to character outputs in levels.<br><br>
  * 
  * Keeps a set of prepared indent strings for improved performance.
  *

@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.Writer;
 
 /**
- * Intent which resets the intent to zero at a specified level. <br/><br/>
+ * Intent which resets the intent to zero at a specified level. <br><br>
  * 
  * All levels are prepared upon constructions.
  */

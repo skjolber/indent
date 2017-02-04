@@ -51,7 +51,8 @@ public class IndentBuilder {
 	/**
 	 * 
 	 * Set the level at which the indent level is reset to zero. 
-	 * 
+	 * @param resetLevel reset level
+	 * @return this instance
 	 */
 	
 	public IndentBuilder withResetLevel(int resetLevel) {
