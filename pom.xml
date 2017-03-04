@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.skjolber</groupId>
 	<artifactId>indent</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>indent</name>
     <description>Simple utility for configurable indent / whitespace</description>
@@ -32,7 +32,7 @@
 		<connection>scm:git:git@github.com:skjolber/indent.git</connection>
 		<developerConnection>scm:git:git@github.com:skjolber/indent.git</developerConnection>
 		<url>git@github.com:skjolber/indent.git</url>
-		<tag>indent-1.0.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<issueManagement>
