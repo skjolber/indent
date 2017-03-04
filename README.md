@@ -14,7 +14,7 @@ Configuration options:
 [Apache 2.0]
 
 # Obtain
-The project is based on [Maven] and is pending deployment at central Maven repository.
+The project is based on [Maven] and is available at central Maven repository.
 
 Example dependency config
 
@@ -22,7 +22,7 @@ Example dependency config
 <dependency>
     <groupId>com.skjolberg</groupId>
     <artifactId>indent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
